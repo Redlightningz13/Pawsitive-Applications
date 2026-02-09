@@ -24,6 +24,11 @@ def calculate():
         if avg_monthly_rent <= 0 or weekly_total_price < 0 or number_of_units <= 0:
             raise ValueError
     except ValueError:
+        weekly_cost_var.set("")
+        monthly_percent_var.set("")
+        paragraph_output.configure(state="normal")
+        paragraph_output.delete("1.0", tk.END)
+        paragraph_output.configure(state="disabled")
         messagebox.showerror(
             "Invalid input",
             "Please enter positive numbers for average rent and unit count, and a non-negative weekly price.",
@@ -31,7 +36,9 @@ def calculate():
         return
 
     weekly_cost_per_unit = weekly_total_price / number_of_units
-    percent_of_monthly_rent = (weekly_cost_per_unit * 4 / avg_monthly_rent) * 100
+    # Convert weekly cost to calendar-month equivalent: 52 weeks / 12 months.
+    monthly_cost_per_unit = weekly_cost_per_unit * (52 / 12)
+    percent_of_monthly_rent = (monthly_cost_per_unit / avg_monthly_rent) * 100
 
     weekly_cost_var.set(f"${weekly_cost_per_unit:,.2f}")
     monthly_percent_var.set(f"{percent_of_monthly_rent:.2f}%")
