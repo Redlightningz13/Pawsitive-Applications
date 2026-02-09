@@ -125,9 +125,9 @@ logo_label = tk.Label(header_frame, bg=BACKGROUND_COLOR)
 logo_label.grid(row=0, column=1, sticky="e")
 load_logo()
 
-avg_rent_var = tk.StringVar(value="1300")
-weekly_price_var = tk.StringVar(value="250")
-units_var = tk.StringVar(value="171")
+avg_rent_var = tk.StringVar()
+weekly_price_var = tk.StringVar()
+units_var = tk.StringVar()
 weekly_cost_var = tk.StringVar(value="")
 monthly_percent_var = tk.StringVar(value="")
 
