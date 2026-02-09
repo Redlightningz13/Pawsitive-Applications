@@ -60,3 +60,17 @@ To show your brand logo in the app header, place one of these files in the proje
 - `pawsitive_logo.png` (preferred)
 - `logo.png`
 - `pawsitive.png`
+
+
+## Android app
+
+An Android version is included under `android-app/` (Kotlin + Jetpack Compose).
+
+- Open `android-app/` in Android Studio.
+- Let Gradle sync.
+- Run on an emulator or Android device.
+
+### Android logo
+The Android launcher icon uses `app/src/main/res/drawable/ic_logo_foreground.xml`.
+If you want to use your exact provided image, replace that vector with PNG assets generated via Android Studio:
+`New > Image Asset` and select your dog logo image.
