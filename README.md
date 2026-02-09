@@ -10,13 +10,28 @@ and computes:
 - cost as a percentage of monthly rent,
 - a full sales paragraph with calculated values substituted in.
 
-## Run
+## Run from source
 
 ```bash
 python3 app.py
 ```
 
-The app uses Python's built-in `tkinter`, so no third-party dependencies are required.
+The app uses Python's built-in `tkinter`, so no third-party dependencies are required to run from source.
+
+## Build a standalone executable (no Python required on the target machine)
+
+Run:
+
+```bash
+python3 build_executable.py
+```
+
+This creates a bundled executable in `dist/` named `PawsitiveRentCalculator` (or `PawsitiveRentCalculator.exe` on Windows).
+
+> Important: executables are platform-specific.  
+> To run on Windows, build on Windows.  
+> To run on macOS, build on macOS.  
+> To run on Linux, build on Linux.
 
 ## Optional logo
 
