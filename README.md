@@ -33,6 +33,27 @@ This creates a bundled executable in `dist/` named `PawsitiveRentCalculator` (or
 > To run on macOS, build on macOS.  
 > To run on Linux, build on Linux.
 
+## Build a Windows `.exe`
+
+### Option 1 (recommended): GitHub Actions (no local Windows setup needed)
+
+1. Push this repo to GitHub.
+2. Open the **Actions** tab.
+3. Run **Build Windows EXE** workflow.
+4. Download the artifact named **PawsitiveRentCalculator-windows**.
+
+### Option 2: Build locally on Windows
+
+On a Windows PC, double-click or run:
+
+```bat
+build_windows_exe.bat
+```
+
+This creates:
+
+- `dist\PawsitiveRentCalculator.exe`
+
 ## Optional logo
 
 To show your brand logo in the app header, place one of these files in the project root:
